@@ -1,0 +1,73 @@
+{
+  // include 用来指定需要被编译的ts文件
+  // 路径: " ** " 表示任意目录
+  //       " * " 表示任意文件
+  "include": [
+    "./src/**/*"
+  ],
+
+  // exclude 用来指定不需要被编译的ts文件
+  // 默认值： ["node_modules", "bower_components", "jspm_packages"]
+  "exclude": [
+    "./src/hello/**/*"
+  ],
+
+  // extends 定义被继承的配置文件
+  "extends": "",
+
+  // files指定被编译的文件，类似于include
+  "files":[],
+
+  // compilerOptions 编译器的选项
+  "compilerOptions": {
+    // target 用来指定ts被编译为的ES的版本
+    // 可选值： 'es3', 'es5', 'es6', 'es2015', 'es2016', 'es2017', 'es2018', 'es2019', 'es2020', 'es2021', 'esnext'.
+    "target": "ES2015",
+
+    // module 指定要使用模块化的规范
+    // 可选值：  'none', 'commonjs', 'amd', 'system', 'umd', 'es6', 'es2015', 'es2020', 'es2022', 'esnext', 'node12', 'nodenext'
+    "module": "ES2015",
+
+    // lib 指定项目中要使用的库
+    // 可选值： 'es5', 'es6', 'es2015', 'es7', 'es2016', 'es2017', 'es2018', 'es2019', 'es2020', 'es2021', 'esnext', 'dom', 'dom.iterable', 'webworker', 'webworker.importscripts', 'webworker.iterable', 'scripthost', 'es2015.core', 'es2015.collection', 'es2015.generator', 'es2015.iterable', 'es2015.promise', 'es2015.proxy', 'es2015.reflect', 'es2015.symbol', 'es2015.symbol.wellknown', 'es2016.array.include', 'es2017.object', 'es2017.sharedmemory', 'es2017.string', 'es2017.intl', 'es2017.typedarrays', 'es2018.asyncgenerator', 'es2018.asynciterable', 'es2018.intl', 'es2018.promise', 'es2018.regexp', 'es2019.array', 'es2019.object', 'es2019.string', 'es2019.symbol', 'es2020.bigint', 'es2020.promise', 'es2020.sharedmemory', 'es2020.string', 'es2020.symbol.wellknown', 'es2020.intl', 'es2021.promise', 'es2021.string', 'es2021.weakref', 'es2021.intl', 'esnext.array', 'esnext.symbol', 'esnext.asynciterable', 'esnext.intl', 'esnext.bigint', 'esnext.string', 'esnext.promise', 'esnext.weakref'.
+    // "lib": ["ES5, dom"],
+
+    // outDir 用来指定编译后文件所在的目录 
+    "outDir": "./dist",
+
+    // outFile 用来将代码合并为一个文件
+    // 设置outFile后， 所有的全局作用域中的代码会合并到同一个文件中
+    // Only 'amd' and 'system' modules are supported alongside --outFile.
+    // "outFile": "./dist/app.js"
+
+    // allowJs 是否对js文件进行编译，默认值是false
+    "allowJs": false,
+
+    // checkJs 是否检查js代码是否符合语法规范，默认值是false
+    "checkJs": false,
+
+    // removeComments 是否移除注释
+    "removeComments": true,
+
+    // noEmit 是否不生成编译后的文件
+    "noEmit": false,
+
+    // noEmitOnError 是否在当有错误时不生成编译后的文件
+    "noEmitOnError": false,
+    
+    // strict 所有严格检查的总开关, 默认是true, 建议是true
+    "strict": true,
+
+    // alwaysStrict 用来设置编译后的文件是否使用严格模式，默认值是false
+    "alwaysStrict": true,
+
+    // noImplicitAny 是否不允许隐式的any类型
+    "noImplicitAny": true,
+
+    // noImplicitThis 是否不允许不明确的this
+    "noImplicitThis": true,
+
+    // strictNullChecks 是否严格的检查空值
+    "strictNullChecks": true
+  }
+}
